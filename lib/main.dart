@@ -26,7 +26,7 @@ var listItem1 = [
   "gross",
   ];
   double _kodi=0;
-  double _lusin=0;
+  double _result=0;
   double _buah=0;
   TextEditingController myController = TextEditingController();
   String _newValue1 = "pilih satuan";
@@ -36,9 +36,9 @@ var listItem1 = [
     final _inputUser = double.parse(myController.value.text);
     setState((){
       if (_newValue1=="buah" && _newValue2=="lusin"){
-        _lusin = (_inputUser / 12);
+        _result = (_inputUser / 12);
       }else if (_newValue1=="lusin" && _newValue2=="buah"){
-        _buah = (_inputUser * 12);
+        _result = (_inputUser * 12);
       }
     });
   }
@@ -108,7 +108,7 @@ var listItem1 = [
                     child: Column(
                       children: [
                         
-                        Text("Hasil: "+'$_lusin'
+                        Text("Hasil: "+'$_result'
                           
                         ),
                       ],
